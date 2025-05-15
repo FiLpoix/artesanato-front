@@ -1,0 +1,38 @@
+.loginContainer{
+  background-color: #F3E5E0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.loginCard{
+  background: linear-gradient( to top, #C92B2B 0%, #C24E25 70%);
+  width:500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.input{
+    background-color: #fff;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.button{
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}

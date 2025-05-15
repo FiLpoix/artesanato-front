@@ -84,12 +84,3 @@ ul p{
 
 
 /* -------------------------------------------- */
-
-.loginContainer{
-  background-color: #F3E5E0;
-  display: flex;
-}
-
-.loginCard{
-  background: linear-gradient( to top, #C92B2B 0%, #C24E25 70%);
-}
