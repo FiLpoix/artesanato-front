@@ -91,3 +91,10 @@
 .footer h1{
   font-size: 20px;
 }
+
+.productImg{
+    width: 25%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+}
