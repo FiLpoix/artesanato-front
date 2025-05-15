@@ -6,7 +6,7 @@
 }
 
 .loginCard{
-  background: linear-gradient( to top, #C92B2B 0%, #C24E25 70%);
+  background: linear-gradient( to bottom, #C92B2B, #BC6D1F);
   width:500px;
   border-radius: 10px;
   display: flex;

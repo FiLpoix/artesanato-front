@@ -1,0 +1,93 @@
+.mainContainer {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f97316, white);
+  font-family: sans-serif;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #C92B2B, #BC6D1F);
+  padding: 16px;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+}
+
+.searchContainer {
+  flex: 1;
+  margin: 0 16px;
+}
+
+.searchInput {
+  width: 70%;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bannerContainer {
+  padding: 16px;
+}
+
+.bannerImg {
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.mainSearch {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.mainSearchInput {
+  width: 40%;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  background-color: #e5e7eb;
+  height: 96px;
+  border-radius: 16px;
+}
+
+.footer{
+    border: solid 2px #ccc;
+}
+
+.footer h1, .footer p{
+  color: #333;
+  text-align: center;
+}
+
+.footer h1{
+  font-size: 20px;
+}
