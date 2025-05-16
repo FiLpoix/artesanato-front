@@ -32,6 +32,11 @@ const Products = () => {
     fetchProduct();
   }, [id]);
 
+  const handleBuy = () => {
+    alert( "compra efetuada com sucesso.");
+    window.location.href = "/";
+  }
+
 
   return (
     <div className="mainContainer">
@@ -59,7 +64,7 @@ const Products = () => {
           <div className="productDescription">{product?.descricao}</div>
           <div className="productFooter">
             <span className="productPrice">R${product?.preco}</span>
-            <button className="iconButton">🛒</button>
+            <button className="iconButton" onClick={() => handleBuy()}>🛒</button>
           </div>
         </div>
       </div>
