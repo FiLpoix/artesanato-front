@@ -4,6 +4,7 @@ import { IoIosSettings } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import girafa from '../assets/girafa.jpg'
+import {Link} from 'react-router-dom'
 
 const HomeScreen = () => {
 
@@ -34,12 +35,6 @@ const HomeScreen = () => {
                         <div key={index} className='card' ></div>
                     ))}
                 </div>
-            <div className='footer' >
-                <h1>about us</h1>
-                <h1>Contacts</h1>
-                <p>instagram</p>
-                <p>facebook</p>
-            </div>
         </div>
     )
 }

@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background: linear-gradient(to bottom, #9e1c1c, #de6722);
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.salesBtn-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.salesBtn {
+  background: #C98A4B;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.salesBtn.active {
+  background: #896139;
+  color: black;
+}
+
+.salesBtn.logout {
+  background: #C98A4B;
+  color: black;
+  margin-top: auto;
+}
+
+.salesBack-link {
+  margin-top: 10px;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.sales-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9e8e3;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sales-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sales-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sale-item {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sale-img-placeholder {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.sale-item span {
+  flex: 1;
+  text-align: left;
+}
+
+.sale-options {
+  text-align: right;
+  flex: 0 0 auto;
+}
