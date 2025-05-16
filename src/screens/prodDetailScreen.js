@@ -4,13 +4,38 @@ import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import girafa from '../assets/girafa.jpg';
 import react from '../assets/react.svg';
-import {Link} from 'react-router-dom'
+import {Link, useParams, useNavigate} from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import api from '../services/api';
 
 const Products = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+ useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await api.get(`/api/products/${id}/`);
+        setProduct(response.data);
+      } catch (err) {
+        console.error("Erro ao buscar produto:", err);
+        setError("Produto não encontrado");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [id]);
+
+
   return (
     <div className="mainContainer">
       <div className="topBar">
-        <div className="logoContainer">
+        <div className="logoContainer" onClick={() => navigate(`/`)}>
           <img src={react} className="logo" alt="logo" />
         </div>
         <div className="searchContainer">
@@ -23,12 +48,16 @@ const Products = () => {
         </div>
       </div>
       <div className="productContainer">
-        <img src={girafa} alt="Produto" className="productImg" />
+         <img 
+          src={product?.imagem || girafa} 
+          alt={product?.nome || "Produto"} 
+          className="productImg"
+        />
         <div className="productInfo">
-          <h2 className="productTitle">title</h2>
-          <div className="productDescription">desc</div>
+          <h2 className="productTitle">{product?.nome}</h2>
+          <div className="productDescription">{product?.descricao}</div>
           <div className="productFooter">
-            <span className="productPrice">R$20,99</span>
+            <span className="productPrice">R${product?.preco}</span>
             <button className="iconButton">🛒</button>
           </div>
         </div>

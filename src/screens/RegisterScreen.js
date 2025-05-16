@@ -55,7 +55,7 @@ const Register = () => {
     <div className="loginContainer">
       <div className="loginCard">
         <h1 className="title"> Cadastro </h1>
-        <form onSubmit={handleRegister} className="register-form">
+        <form onSubmit={handleRegister} style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <input
             className="loginInput"
             type="text"
