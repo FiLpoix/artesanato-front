@@ -70,6 +70,7 @@ const HomeScreen = () => {
         e.target.src = '../assets/girafa.jpg';
         e.target.alt = "girafa";
       }}
+      onClick={() => navigate(`/products/${products[0].id}`)}
     />
   ) : (
     <div className="bannerPlaceholder">
