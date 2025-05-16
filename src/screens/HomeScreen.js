@@ -1,5 +1,6 @@
 import '../css/home.css'
 import react from '../assets/react.svg'
+import logo from '../assets/logo.png'
 import { IoIosSettings } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
@@ -48,19 +49,19 @@ const HomeScreen = () => {
         <div className='mainContainer'>
             <div className='topBar'>
                 <div className='logoContainer'>
-                    <img src={react} className='logo' alt='logo' />
+                    <img src={logo} className='logo' alt='logo' />
                 </div>
                 <div className='searchContainer'>
             <input type='text' placeholder='Procurar' className='searchInput' />
                 </div>
                 <div className='buttons'>
-            <IoIosSettings className='icon' />
+            <IoIosSettings className='icon' onClick={() => navigate(`/artisan`)}  />
             <FaShoppingCart className='icon' />
-            <CgProfile className='icon' />
+            <CgProfile className='icon' onClick={() => navigate(`/login`)} />
                 </div>
             </div>
             <div className='bannerContainer'>
-            {products && products.length > 1 ? (
+            {products && products.length > 0 ? (
     <img 
       src={products[0].imagem} 
       className='bannerImg' 
@@ -72,7 +73,7 @@ const HomeScreen = () => {
     />
   ) : (
     <div className="bannerPlaceholder">
-      Banner promocional
+      <img src={girafa} alt='girafa promocional' className='bannerImg'/>
     </div>
   )}
             </div>

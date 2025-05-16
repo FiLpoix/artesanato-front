@@ -46,8 +46,6 @@ const Login = () => {
         } catch (error) {
             console.error("Erro no login:", error);
             alert(
-                error.response?.data?.detail || 
-                error.message || 
                 "Ocorreu um erro ao tentar fazer login."
             );
         } finally {

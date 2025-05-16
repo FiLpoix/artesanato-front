@@ -2,9 +2,11 @@ import React from 'react';
 import '../css/sales.css';
 import { CgProfile } from "react-icons/cg";
 import { IoIosExit } from "react-icons/io";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 const Sales = () => {
+  const navigate = useNavigate();
+
   const salesData = [
     { id: 1, name: 'Girafa', price: 'R$--,--' },
     { id: 2, name: 'Girafa', price: 'R$--,--' },
@@ -19,11 +21,11 @@ const Sales = () => {
         <div className="profile-icon"><CgProfile className='icon' /></div>
         <button className="salesBtn">Perfil</button>
         <div className='salesBtn-group'>
-        <button className="salesBtn">Produtos</button>
+        <button className="salesBtn" onClick={() => navigate(`/artisan`)} >Produtos</button>
         <button className="salesBtn active">Vendas</button>
         </div>
         <button className="salesBtn logout"><IoIosExit /> Sair</button>
-        <a href="#" className="salesBack-link">Voltar para início</a>
+        <a href="/" className="salesBack-link"  >Voltar para início</a>
       </aside>
 
       <main className="sales-container">

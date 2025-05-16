@@ -7,6 +7,7 @@ import react from '../assets/react.svg';
 import {Link, useParams, useNavigate} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import api from '../services/api';
+import logo from '../assets/logo.png'
 
 const Products = () => {
   const { id } = useParams();
@@ -36,15 +37,15 @@ const Products = () => {
     <div className="mainContainer">
       <div className="topBar">
         <div className="logoContainer" onClick={() => navigate(`/`)}>
-          <img src={react} className="logo" alt="logo" />
+          <img src={logo} className="logo" alt="logo" />
         </div>
         <div className="searchContainer">
           <input type="text" placeholder="Procurar" className="searchInput" />
         </div>
         <div className="buttons">
-          <IoIosSettings className="icon" />
+          <IoIosSettings className="icon" onClick={() => navigate(`/artisan`)} />
           <FaShoppingCart className="icon" />
-          <CgProfile className="icon" />
+          <CgProfile className="icon"  onClick={() => navigate(`/login`)} />
         </div>
       </div>
       <div className="productContainer">
